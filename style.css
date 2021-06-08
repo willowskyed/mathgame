@@ -1,0 +1,99 @@
+/* doc sizing */
+html {
+  font-size: 16px;
+}
+/* md screens */
+@media (max-width: 992px) {
+  html { font-size: 15px; }
+}
+/* sm screens */
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+}
+/* xs screens */
+@media (max-width: 576px) {
+  html { font-size: 13px; }
+}
+
+.container {
+
+}
+
+h1 {
+  font-family: 'Atures-100', sans-serif;
+  font-size: 3rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+h2 { /* gamebox */
+  font-family: 'Atures-500', sans-serif;
+  font-size: 2.5rem;
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+h3 { /* scorebox */
+  font-family: 'Atures-300', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+p {
+  font-family: 'Atures-100', sans-serif;
+}
+
+#textbox {
+  width: 25vw;
+  margin-left: 1em;
+  padding: 1em;
+}
+
+#scorebox {
+  width: 15em;
+  margin-right: 1em;
+  padding: 1em;
+}
+
+#gamebox {
+  margin: auto;
+  text-align: center;
+}
+
+#user-input {
+  font-family: 'Atures-100', sans-serif;
+  text-align: center;
+}
+
+/* layout for small screens */
+@media (max-width: 700px) {
+  #textbox, #scorebox, #gamebox {
+    display: flex;
+    float: none !important;
+    width: 90vw;
+    margin: 1em;
+  }
+}
+
+/* fonts */
+@font-face {
+  font-family: 'Atures-100';
+  src: url("./fonts/Atures100.otf");
+}
+@font-face {
+  font-family: 'Atures-300';
+  src: url("./fonts/Atures300.otf");
+}
+@font-face {
+  font-family: 'Atures-500';
+  src: url("./fonts/Atures500.otf");
+}
+@font-face {
+  font-family: 'Atures-700';
+  src: url("./fonts/Atures700.otf");
+}
+@font-face {
+  font-family: 'Atures-900';
+  src: url("./fonts/Atures900.otf");
+}
