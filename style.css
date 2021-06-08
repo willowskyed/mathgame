@@ -15,10 +15,6 @@ html {
   html { font-size: 13px; }
 }
 
-.container {
-
-}
-
 h1 {
   font-family: 'Atures-100', sans-serif;
   font-size: 3rem;
@@ -48,12 +44,16 @@ p {
   width: 25vw;
   margin-left: 1em;
   padding: 1em;
+  background-color: white;
+  border-color: #7700ff !important;
 }
 
 #scorebox {
   width: 15em;
   margin-right: 1em;
   padding: 1em;
+  background-color: white;
+  border-color: #ff9500 !important;
 }
 
 #gamebox {
@@ -64,6 +64,8 @@ p {
 #user-input {
   font-family: 'Atures-100', sans-serif;
   text-align: center;
+  border-color: #00ff8c;
+  outline-color:  #ffe600;
 }
 
 /* layout for small screens */
@@ -96,4 +98,111 @@ p {
 @font-face {
   font-family: 'Atures-900';
   src: url("./fonts/Atures900.otf");
+}
+
+/* background effect */
+h1, #textbox, #gamebox, #scorebox {
+  z-index: 1;
+}
+
+.circles {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  font-family: 'Atures-900';
+  animation: animate 10s linear infinite;
+  bottom: -200px;
+  z-index: -1;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  font-size: 50px;
+  animation-delay: 0s;
+  color: #ff00bb;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  font-size: 80px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+  color: #0080ff;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  font-size: 120px;
+  animation-delay: 4s;
+  color: #80ff00;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  font-size: 100px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+  color: #ff4000;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  font-size: 40px;
+  animation-delay: 0s;
+  color: #b300ff;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  font-size: 150px;
+  animation-delay: 3s;
+  color: #ff9500;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  font-size: 170px;
+  animation-delay: 0s;
+  color: #ffe600;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  font-size: 60px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+  color: #00ff8c;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  font-size: 70px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+  color: #00ffff;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  font-size: 90px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+  color: #7700ff;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+  }
 }
