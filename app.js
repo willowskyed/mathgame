@@ -12,12 +12,23 @@ $(document).ready(function(){
   var updateScore = function (amount) {
     score += amount;
     $('#score').text(score);
+    return score;
   };
+
+// record high score
+  var highScore = 0;
+  function recordHighScore(score) {
+      if (score > highScore) {
+        highScore = score;
+        $('#highscore').text(highScore);
+      }
+    };
 
   var startGame = function () {
     if (!interval) {
       if (timeLeft === 0) {
         updateTimeLeft(10);
+        recordHighScore(score);
         updateScore(-score);
       }
       interval = setInterval(function () {
@@ -30,10 +41,6 @@ $(document).ready(function(){
     }
   };
 
-  var randomNumberGenerator = function (size) {
-    return Math.ceil(Math.random() * size);
-  };
-
   var questionGenerator = function () {
     var question = {};
     var num1 = randomNumberGenerator(10);
@@ -43,6 +50,10 @@ $(document).ready(function(){
     question.equation = String(num1) + " + " + String(num2);
 
     return question;
+  };
+
+  var randomNumberGenerator = function (size) {
+    return Math.ceil(Math.random() * size);
   };
 
   var renderNewQuestion = function () {
